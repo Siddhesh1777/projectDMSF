@@ -1,0 +1,134 @@
+## Justin Stein, Siddhesh Periaswami
+## ISTE 330 Group Project
+
+Driver Loaded com.mysql.cj.jdbc.Driver
+
+Your DB Connection is live!
+-------Projects--------
+Project Name: Test Project, Project Abstract: This is a test project. It tests the existence of things and also sometimes the universe., Lead Faculty: FacultyAccount, Test
+Project Name: Test Project 2, Project Abstract: This project is about scopes... yeah. That., Lead Faculty: FacultyAccount, Test
+Project Name: Test3, Project Abstract: Test project abstract 3, Lead Faculty: FacultyAccount, Test
+-------END Projects--------
+
+-------Students--------
+FullStudentObject{name='Justin Stein', gradTerm='2201', emails=[justein230@gmail.com, jxs3969@rit.edu], phoneNumbers=[914-559-8140, 914-632-0292], projects=[Test Project], majors=[Computing and Information Technologies], interests=[Databases, Windows Administration]}
+-------END Students--------
+
+-------Faculty--------
+FacultyObject{name='FacultyAccount, Test', employmentStartDate=2020-11-02, departments=[CSEC, iSchool], phoneNumbers=[585-475-2572, 585-475-5000], emails=[da@gmail.com, da3612@rit.edu], abstractTexts=[This is a second test abstract.
+
+It even has line breaks!, This is a test abstract.], projects=[Test Project, Test Project 2], id=2}
+-------END Faculty--------
+
+-------Majors--------
+Computing and Information Technologies
+Muggle Studies
+-------END Majors--------
+
+-------Interests--------
+Databases
+UI/UX
+Windows Administration
+Linux Administration
+RPA
+Automation
+Scripting
+-------END Interests--------
+
+-------Departments--------
+DepartmentObject{departmentId=1, departmentName='CSEC'}
+DepartmentObject{departmentId=2, departmentName='iSchool'}
+-------END Departments--------
+
+Student 1: [Databases, Windows Administration], [Computing and Information Technologies]
+---------Inserting majors and interests---------
+-----Inserting Majors-----
+Command to be executed: INSERT INTO StudentMajor VALUES(?,?)
+-----Insert finished-----
+
+-----Inserting interests-----
+Command to be executed: INSERT INTO StudentInterest VALUES (?,?)
+-----Insert finished-----
+
+Student 1: [Databases, UI/UX, Windows Administration], [Computing and Information Technologies, Muggle Studies]
+---------END Inserting majors and interests---------
+---------Deleting majors and interests---------
+-----Deleting interests-----
+Command to be executed: Delete from StudentInterest where InterestID = ? AND PersonID = ?
+-----Deleted interests-----
+
+-----Deleting Majors-----
+Command to be executed: DELETE FROM StudentMajor WHERE MajorID = ? AND PersonID = ?
+-----Deleted majors-----
+
+Student 1: [Databases, Windows Administration], [Computing and Information Technologies]
+---------END Deleting majors and interests---------
+---------Inserting Project-Faculty Link---------
+Faculty 2: [Test Project, Test Project 2]
+-----Inserting projects-----
+Command to be executed: INSERT INTO ProjectFaculty VALUES(?,?);
+-----Insert finished-----
+Faculty 2: [Test Project, Test Project 2, Test3]
+---------END Inserting Project-Faculty Link---------
+Faculty 2: [da@gmail.com, da3612@rit.edu], [585-475-2572, 585-475-5000]
+Student 1: [justein230@gmail.com, jxs3969@rit.edu], [914-559-8140, 914-632-0292]
+---------Inserting Emails and Phone Numbers---------
+-----Inserting phone number-----
+Command to be executed: INSERT INTO PhoneNumbers VALUES(?,?);
+-----Insert finished-----
+-----Inserting phone number-----
+Command to be executed: INSERT INTO PhoneNumbers VALUES(?,?);
+-----Insert finished-----
+Faculty 2: [da@gmail.com, da3612@rit.edu, test@rit.edu], [585-475-2572, 585-475-5000, 973-476-9049]
+Student 1: [justein230@gmail.com, jxs3969@rit.edu, waeiogaehwogi@aeioqwhw.com], [914-559-8140, 914-632-0274, 914-632-0292]
+Deleting added records...
+-----Deleting phone number-----
+-----Delete finished-----
+-----Deleting phone number-----
+-----Delete finished-----
+After Deletion:
+Faculty 2: [da@gmail.com, da3612@rit.edu], [585-475-2572, 585-475-5000]
+Student 1: [justein230@gmail.com, jxs3969@rit.edu], [914-559-8140, 914-632-0292]
+---------END Inserting Emails and Phone Numbers---------
+---------Inserting Abstract---------
+Faculty 2: [This is a second test abstract.
+
+It even has line breaks!, This is a test abstract.]
+-----Inserting abstracts-----
+Command to be executed: INSERT INTO Abstract (FacultyID, AbstractText) VALUES(?,?);
+-----Insert finished-----
+
+Faculty 2: [test3, This is a second test abstract.
+
+It even has line breaks!, This is a test abstract.]
+---------END Inserting Abstract---------
+---------Creating student and faculty---------
+Student IDs: [1]
+Faculty IDs: [2]
+ID of inserted record is: 26
+-----Inserting faculty-----
+Command to be executed: INSERT INTO Person (FirstName, LastName) VALUES(?,?);
+ID of inserted record is: 27
+-----Insert finished-----
+Student IDs: [1, 26]
+Faculty IDs: [2]
+---------END Creating student and faculty---------
+Project Names: [Test Project, Test Project 2, Test3]
+---------Inserting Project---------
+-----Inserting projects-----
+Command to be executed: INSERT INTO Project (ProjectName, Abstract, LeadFacultyID) VALUES(?,?,?);
+ID of inserted record is: 15
+-----Insert finished-----
+Project Name: Sensor Networks, Project Abstract: Erik Golen is really smart and talks about sensor networks., Lead Faculty: FacultyAccount, Test
+---------END Inserting Project---------
+[Test Project, Test Project 2, Test3, Sensor Networks]
+---------Updating Grad Term---------
+Before Update:
+Student 1: 2201
+After Update:
+Student 1: 2201
+---------END Updating Grad Term---------
+---------Updating Faculty Password---------
+---------END Updating Faculty Password---------
+
+Process finished with exit code 0

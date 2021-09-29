@@ -1,0 +1,12 @@
+This program is comprised of single-transaction data insertion and deletion methods as well as full get methods. This means that all inserts are performed as one-offs and looping will be taken care of in the presentation layer. Likewise, all get methods are performed as collective, meaning that single records will need to be picked out by another method (to be determined later, as explained to Prof. Habermas on Tuesday).
+
+The CustomPresentationLayer.java class is the main point of entry. It is a really cool GUI that is based on table views. Please click on a row before right clicking on it.
+
+The right click context menu gives you all kinds of options to interact with the data.
+
+A list of IDs for login can be found here:
+Faculty: 2 --> TestPass1, 26 --> TestPass2
+Student: 1, 27
+
+Siddhesh and I are very proud of this GUI and took great pains to make it easy and fun to use for the end user.
+
